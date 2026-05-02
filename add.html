@@ -2,16 +2,75 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>إضافة قاعة زفاف</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Hall You Want</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>صفحة إضافة قاعة جديدة</h1>
-    <h2>hall</h2>
-    <form>
-        <input type="text" placeholder="اسم القاعة">
-        <input type="text" placeholder="الموقع">
-        <input type="number" placeholder="السعر">
-        <button type="submit">إضافة القاعة</button>
-    </form>
+
+    <!-- Header Section -->
+    <header class="hero-section">
+        <h1>ALL HALL YOU WANT</h1>
+        <div class="bottom-border"></div>
+    </header>
+
+    <!-- Main Content: Halls List -->
+    <main class="halls-container">
+        <!-- تكرار هذا العنصر 10 مرات -->
+        <div class="hall-card" onclick="openHallDetails('صالة الزمرد', '0599000000')">
+            <img src="https://via.placeholder.com/150" alt="صورة الصالة" class="hall-thumb">
+            <div class="hall-info">
+                <h2 class="hall-name">صالة الزمرد الملكية</h2>
+                <p class="contact-num">رقم التواصل: 0599000000</p>
+            </div>
+        </div>
+
+        <!-- أضفت لك بطاقات إضافية كمثال -->
+        <div class="hall-card" onclick="openHallDetails('صالة اللؤلؤة', '0599111111')">
+            <img src="https://via.placeholder.com/150" alt="صورة الصالة" class="hall-thumb">
+            <div class="hall-info">
+                <h2 class="hall-name">صالة اللؤلؤة المضيئة</h2>
+                <p class="contact-num">رقم التواصل: 0599111111</p>
+            </div>
+        </div>
+        <!-- يمكنك تكرار الـ div أعلاه حتى تصل لـ 10 صالات -->
+    </main>
+
+    <!-- Modal Section (يظهر عند الضغط على الصالة) -->
+    <div id="hallModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle">تفاصيل الصالة</h2>
+            
+            <div class="modal-images">
+                <img src="https://via.placeholder.com/300x200" alt="صورة داخلية 1">
+                <img src="https://via.placeholder.com/300x200" alt="صورة داخلية 2">
+            </div>
+
+            <h3>جدول توفر الحجوزات</h3>
+            <table class="booking-table">
+                <tr>
+                    <th>اليوم</th>
+                    <th>الحالة</th>
+                </tr>
+                <tr><td>السبت</td><td><input type="checkbox"> متاح</td></tr>
+                <tr><td>الأحد</td><td><input type="checkbox" checked disabled> محجوز</td></tr>
+                <tr><td>الاثنين</td><td><input type="checkbox"> متاح</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        function openHallDetails(name, phone) {
+            document.getElementById('hallModal').style.display = "block";
+            document.getElementById('modalTitle').innerText = name;
+        }
+        function closeModal() {
+            document.getElementById('hallModal').style.display = "none";
+        }
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('hallModal')) closeModal();
+        }
+    </script>
 </body>
 </html>

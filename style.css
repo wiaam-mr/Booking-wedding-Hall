@@ -1,0 +1,121 @@
+/* إعدادات عامة */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* الهيدر */
+.hero-section {
+    background-color: #2c3e50; /* لون غامق ليبرز النص الأبيض */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.hero-section h1 {
+    color: #ffffff;
+    font-size: 3rem;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.bottom-border {
+    width: 150px;
+    height: 5px;
+    background-color: #800000; /* اللون الخمري */
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+/* قائمة الصالات */
+.halls-container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.hall-card {
+    background: white;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.hall-card:hover {
+    transform: scale(1.02); /* تأثير تكبير بسيط عند التمرير */
+}
+
+.hall-thumb {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-left: 20px;
+}
+
+.hall-name {
+    margin: 0;
+    font-size: 1.4rem;
+    color: #333;
+}
+
+.contact-num {
+    color: #666;
+    margin-top: 5px;
+}
+
+/* النافذة المنبثقة (Modal) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.modal-images img {
+    width: 45%;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.booking-table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+.booking-table th, .booking-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.booking-table th {
+    background-color: #800000;
+    color: white;
+}
+
+.close {
+    float: left;
+    font-size: 28px;
+    cursor: pointer;
+}
