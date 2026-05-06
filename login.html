@@ -1,24 +1,25 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
+[5/6/2026 3:19 PM] Sedra: <!DOCTYPE html>
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تسجيل الدخول | حجز قاعات الأفراح</title>
+    <title>Login | Booking Wedding Hall</title>
     
-    <!-- قسم التنسيقات الاحترافية (CSS) المدمج -->
     <style>
         :root {
-            --primary-color: #d4a373; /* لون ذهبي هادئ يناسب القاعات */
-            --secondary-color: #faedcd;
-            --text-color: #333;
-            --bg-gradient: linear-gradient(135deg, #e9edc9 0%, #fefae0 100%);
+            /* Pink Color Palette */
+            --primary-color: #ff85a2; /* Soft Pink */
+            --secondary-color: #fce4ec; /* Very Light Pink */
+            --text-color: #4a4a4a; /* Dark Gray for text */
+            --accent-color: #ff4081; /* Darker Pink for focus/hover */
+            --bg-gradient: linear-gradient(135deg, #fce4ec 0%, #fff1f6 100%); /* Pink to white gradient */
         }
 
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Cleaner font */
         }
 
         body {
@@ -32,70 +33,80 @@
 
         .login-container {
             background: white;
-            padding: 2.5rem;
-            border-radius: 15px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            padding: 3rem; /* More padding */
+            border-radius: 20px; /* More rounded */
+            box-shadow: 0 15px 35px rgba(255, 133, 162, 0.2); /* Soft pink shadow */
             width: 100%;
-            max-width: 400px;
+            max-width: 420px;
             text-align: center;
+            border: 1px solid rgba(255, 133, 162, 0.1);
         }
 
         .login-container h2 {
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
             color: var(--primary-color);
-            font-size: 1.8rem;
+            font-size: 2.2rem;
+            font-weight: 700;
         }
 
         .form-group {
-            margin-bottom: 1.2rem;
-            text-align: right;
+            margin-bottom: 1.5rem;
+            text-align: left;
         }
 
         .form-group label {
             display: block;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.6rem;
             font-weight: 600;
+            color: #666;
+            font-size: 0.95rem;
         }
 
         .form-group input {
             width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
+            padding: 14px;
+            border: 2px solid #eee; /* Lighter border */
+            border-radius: 10px;
             outline: none;
-            transition: border-color 0.3s;
+            transition: all 0.3s;
+            background-color: #fcfcfc;
         }
 
         .form-group input:focus {
             border-color: var(--primary-color);
+            background-color: white;
+            box-shadow: 0 0 10px rgba(255, 133, 162, 0.1);
         }
 
         .login-btn {
             width: 100%;
-            padding: 12px;
-            background-color: var(--primary-color);
+            padding: 14px;
+            background: linear-gradient(45deg, var(--primary-color), var(--accent-color)); /* Pink gradient btn */
             border: none;
-            border-radius: 8px;
+            border-radius: 10px;
             color: white;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             font-weight: bold;
             cursor: pointer;
-            transition: background 0.3s, transform 0.2s;
+            transition: all 0.3s, transform 0.2s;
+            box-shadow: 0 5px 15px rgba(255, 64, 129, 0.3);
         }
 
         .login-btn:hover {
-            background-color: #bc8a5f;
-            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255, 64, 129, 0.4);
+            transform: translateY(-3px);
         }
 
         .footer-links {
-            margin-top: 1.5rem;
-            font-size: 0.9rem;
+            margin-top: 2rem;
+            font-size: 0.95rem;
+            color: #777;
         }
 
         .footer-links a {
-            color: var(--primary-color);
+            color: var(--accent-color);
             text-decoration: none;
+            font-weight: 600;
         }
 
         .footer-links a:hover {
@@ -106,21 +117,21 @@
 <body>
 
     <div class="login-container">
-        <h2>تسجيل الدخول</h2>
+        <h2>Welcome</h2> <!-- Changed from Login to Welcome for a friendlier feel -->
         <form>
             <div class="form-group">
-                <label for="username">اسم المستخدم أو البريد</label>
-                <input type="text" id="username" placeholder="أدخل اسم المستخدم" required>
+                <label for="username">Email or Username</label>
+                <input type="text" id="username" placeholder="e.g. happy@example.com" required>
             </div>
             <div class="form-group">
-                <label for="password">كلمة المرور</label>
-                <input type="password" id="password" placeholder="أدخل كلمة المرور" required>
+                <label for="password">Password</label>
+[5/6/2026 3:19 PM] Sedra: <input type="password" id="password" placeholder="Enter your secure password" required>
             </div>
-            <button type="submit" class="login-btn">دخول</button>
+            <button type="submit" class="login-btn">Sign In</button> <!-- Changed to Sign In -->
         </form>
         
         <div class="footer-links">
-            <p>ليس لديك حساب؟ <a href="#">إنشاء حساب جديد</a></p>
+            <p>New here? <a href="#">Create a pink account!</a></p>
         </div>
     </div>
 
