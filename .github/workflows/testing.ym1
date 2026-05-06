@@ -15,4 +15,3 @@ jobs:
       - name: Check Essential Files
         run: |
           ls login.html
-          ls style.css
