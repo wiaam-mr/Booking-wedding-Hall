@@ -1,0 +1,23 @@
+name: CI Auto Test
+on:
+  push:
+    branches: [ SCRUM-1-login-page, main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get Code
+        uses: actions/checkout@v3
+
+      - name: Check Essential Files
+        run: ls login.html
+
+      - name: Validate HTML Structure
+        run: |
+          # This checks if the file contains the required login fields
+          grep -q "username" login.html
+          grep -q "password" login.html
+          echo "Logic Check: Essential login fields are present."
