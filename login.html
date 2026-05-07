@@ -134,7 +134,31 @@
             <p>New here? <a href="#">Create a pink account!</a></p>
         </div>
     </div>
+<script>
+    // Logic to validate the login form
+    function validateLoginFields(username, password) {
+        // 1. Check for empty username (Requirement: Empty task/username -> false)
+        if (!username || username.trim() === "") {
+            console.error("Validation Failed: Username is empty");
+            return false;
+        }
 
+        // 2. Check for valid email format
+        if (!username.includes('@')) {
+            console.error("Validation Failed: Invalid email format");
+            return false;
+        }
+
+        // 3. Check for password length
+        if (password.length < 6) {
+            console.error("Validation Failed: Password too short");
+            return false;
+        }
+
+        console.log("Validation Passed: Ready for CI check");
+        return true;
+    }
+</script>
 </body>
 </html>
 
