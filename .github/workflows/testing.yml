@@ -12,7 +12,7 @@ jobs:
       - name: Get Code
         uses: actions/checkout@v3
 
-- name: Check Essential Files
+      - name: Check Essential Files
         run: ls login.html
 
       - name: Validate HTML Structure
