@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Hall | Wedding System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="booking-container">
+        <h1>Book Your Dream Hall</h1>
+        <p>Please fill in the details below to reserve your date.</p>
+
+        <form id="bookingForm">
+            <div class="form-group">
+                <label for="userName">Full Name</label>
+                <input type="text" id="userName" name="userName" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="0123456789" required>
+            </div>
+
+            <div class="form-group">
+                <label for="weddingDate">Wedding Date</label>
+                <input type="date" id="weddingDate" name="weddingDate" required>
+            </div>
+
+            <div class="form-group">
+                <label for="guestCount">Number of Guests</label>
+                <input type="number" id="guestCount" name="guestCount" min="1" placeholder="e.g. 150" required>
+            </div>
+
+            <div class="form-group">
+                <label for="hallName">Select Hall</label>
+                <select id="hallName" name="hallName" required>
+                    <option value="" disabled selected>Choose a hall...</option>
+                    <option value="grand-ballroom">The Grand Ballroom</option>
+                    <option value="sunset-garden">Sunset Garden</option>
+                    <option value="royal-suite">Royal Suite</option>
+                    <option value="crystal-palace">Crystal Palace</option>
+                </select>
+            </div>
+
+            <button type="submit" id="submitBtn">Submit Booking</button>
+        </form>
+
+        <div id="message" class="hidden"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
