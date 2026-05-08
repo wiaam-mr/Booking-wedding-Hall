@@ -1,7 +1,7 @@
 name: CI Auto Test
 on:
   push:
-    branches: [ SCRUM-1-login-page, main ]
+    branches: [ SCRUM-1-login-page, main, SCRUM-4-show-hall ]
   pull_request:
     branches: [ main ]
 
@@ -16,3 +16,18 @@ jobs:
         run: |
           ls login.html
           ls style.css
+          ls show.html
+
+      - name: Validate Login HTML Structure
+        run: |
+          # This checks if the login file contains the required fields
+          grep -q "username" login.html
+          grep -q "password" login.html
+          echo "Login Logic Check: Essential login fields are present."
+
+      - name: Validate Show Halls HTML Structure
+        run: |
+          # This checks if the show halls file contains the required elements
+          grep -q "hall-card\|halls-list" show.html
+          grep -q "View Details" show.html
+          echo "Show Halls Logic Check: Essential elements are present."
