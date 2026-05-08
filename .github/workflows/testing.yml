@@ -1,7 +1,7 @@
 name: CI Auto Test
 on:
   push:
-    branches: [ SCRUM-1-login-page, main ]
+    branches: [ SCRUM-1-login-page, main, SCRUM-4-show-hall ]
   pull_request:
     branches: [ main ]
 
@@ -13,11 +13,18 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Check Essential Files
-        run: ls login.html
-
-      - name: Validate HTML Structure
         run: |
-          # This checks if the file contains the required login fields
+          ls login.html
+          ls show.html
+
+      - name: Validate Login HTML Structure
+        run: |
           grep -q "username" login.html
           grep -q "password" login.html
-          echo "Logic Check: Essential login fields are present."
+          echo "Login Logic Check: Essential login fields are present."
+
+      - name: Validate Show Halls HTML Structure
+        run: |
+          grep -q "hall-card\|halls-list" show.html
+          grep -q "View Details" show.html
+          echo "Show Halls Logic Check: Essential elements are present."
