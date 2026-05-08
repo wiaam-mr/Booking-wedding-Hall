@@ -1,7 +1,7 @@
 name: CI Auto Test
 on:
   push:
-    branches: [ SCRUM-1-login-page, main, SCRUM-4-show-hall ]
+    branches: [ main ]
   pull_request:
     branches: [ main ]
 
