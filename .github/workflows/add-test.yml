@@ -1,0 +1,20 @@
+name: CI Halls Feature Test
+on:
+  push:
+    branches: [ main, SCRUM-2-add-a-hall ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  halls-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Verify Halls Page
+        run: |
+          ls index.html
+          grep -q "halls-container" index.html
+          grep -q "openHallDetails" index.html
+          echo "Halls Feature: All elements are valid."
