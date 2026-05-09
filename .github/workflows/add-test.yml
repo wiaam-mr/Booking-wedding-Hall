@@ -14,7 +14,7 @@ jobs:
 
       - name: Verify Halls Page
         run: |
-          ls index.html
-          grep -q "halls-container" index.html
-          grep -q "openHallDetails" index.html
+          ls add.html
+          grep -q "halls-container" add.html
+          grep -q "openHallDetails" add.html
           echo "Halls Feature: All elements are valid."
